@@ -3,12 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Encuentra una gran variedad de carretillas aqui en FAHEMA - Somos fabricantes, importadores y distribuidores de ferreteria en general.">
-    <meta name="keywords" content="fahema, carretillas peru, carretillas precio, carretillas de carga, carretillas fahema, ferreterias peru">
+    <meta name="description" content="👨‍🔧👩‍🔧 Somos fabricantes, importadores y distribuidores de 🛠 ferreteria en general. Nos especializamos en la fabricacion de carretillas o buggys de diferentes tipos.">
+    <meta name="keywords" content="fahema,fabrica de carretillas en lima, fabricantes de carretillas peru, carretillas precio, carretillas truper peru, ferreterias peru, carretillas peru precio, llantas para carretillas peru">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Fahema">
+    <meta name="country" content="PER">
 
-    <title>Nosotros - FAHEMA</title>
+    <title>Nosotros somos FAHEMA</title>
     <link rel="icon" href="img/core-img/fahema.ico">
     <link rel="stylesheet" href="style.css">
 
@@ -19,6 +21,24 @@
         <i class="circle-preloader"></i>
     </div>
 
+    <div id="top-bar">
+        <div id="top-bar-inner" class="container">
+            <div class="top-bar-inner-wrap">
+                <div class="top-bar-content">
+                    <div class="inner">
+                        <span class="address content">
+                            Av. Canto Bello 473-B S.J.L. - Av. Argentina CC. "La Bellota" Stand H9 Lima</span>
+                        <span class="phone content">
+                            <a rel="nofollow" href="https://api.whatsapp.com/send?phone=51922056739" target="_blank">922056739 - </a>
+                            <a rel="nofollow" href="https://api.whatsapp.com/send?phone=51977321751" target="_blank">977321751 - </a>
+                            <a rel="nofollow" href="https://api.whatsapp.com/send?phone=51993213625" target="_blank">993213625</a></span>
+                        <span class="time content">Lun-Vie: 9am - 6pm Sab: 9am-5pm</span>
+                    </div>                            
+                </div>
+            </div>                    
+        </div>
+    </div>
+
     <header class="header-area">
         <div class="top-header">
             <div class="container h-100">
@@ -26,7 +46,7 @@
                     <div class="col-12 h-100">
                         <div class="header-content h-100 d-flex align-items-center justify-content-between">
                             <div class="academy-logo">
-                                <a href="index.html"><img src="img/core-img/logo-positivo.svg" alt=""></a>
+                                <a href="index.html"><img src="img/core-img/logo-positivo-fahema.svg" alt=""></a>
                             </div>
                             <div class="cotizacion">
                                 <a href="mailto:fahemaperu@gmail.com?Subject=Le%20escribo%20para%20solicitar%20una%20cotización%20para%20los%20siguientes%20productos%20[%20Insertar%20lista%20aquí%20]%20
@@ -38,7 +58,7 @@
             </div>
         </div>
 
-        <div class="academy-main-menu">
+        <section class="academy-main-menu">
             <div class="classy-nav-container breakpoint-off">
                 <div class="container">
                     <nav class="classy-navbar justify-content-between" id="academyNav">
@@ -71,28 +91,97 @@
                     </nav>
                 </div>
             </div>
-        </div>
+        </section>
     </header>
 
     <div class="breadcumb-area bg-img" style="background-image: url(img/bg-img/nosotros.jpg);">
         <div class="bradcumbContent">
-            <h2>Nosotros</h2>
+            <h1>Nosotros</h1>
         </div>
     </div>
+
+    <section class="nav-bottom">
+        <div class="popup-whatsapp fadeIn">
+            <div class="content-whatsapp -top">
+                <div class="container">
+                       <div class="row">
+                           <div class="col-3 asesor">
+                               <img src="./img/bg-img/sheyla.jpg">
+                           </div>
+                            <div class="col-7"><b>Sheyla Aviles</b> Asesora de Ventas</div>
+                            <div class="col-2">
+                               <button type="button" class="closePopup col-2">
+                                   <i class="fa fa-times" aria-hidden="true"></i>
+                               </button> 
+                            </div>
+                       </div>
+
+                       <div class="row">
+                           <div class="col-10 desc-chat"><p> ¡Bienvenido a FAHEMA! 👋, ¿en que puedo ayudarte? 🤓</p></div>
+                       </div>
+               </div>
+            </div>
+
+            <div class="content-whatsapp -bottom">
+              <input class="whats-input" id="whats-in" type="text" Placeholder="Enviar mensaje..." />
+               <button class="send-msPopup" id="send-btn" type="button">
+                   <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                </button>
+            </div>
+           </div>
+        <button type="button" id="whats-openPopup" class="whatsapp-button">
+            <div class="float" >
+               <i class="fa fa-whatsapp my-float"></i></div>
+        </button>
+       <div class="circle-anime"></div>
+    </section>
+
+    <script>
+        popupWhatsApp = () => {
+ 
+       let btnClosePopup = document.querySelector('.closePopup');
+       let btnOpenPopup = document.querySelector('.whatsapp-button');
+       let popup = document.querySelector('.popup-whatsapp');
+       let sendBtn = document.getElementById('send-btn');
+
+       btnClosePopup.addEventListener("click",  () => {
+       popup.classList.toggle('is-active-whatsapp-popup')
+       })
+ 
+       btnOpenPopup.addEventListener("click",  () => {
+       popup.classList.toggle('is-active-whatsapp-popup')
+       popup.style.animation = "fadeIn .6s 0.0s both";
+       })
+ 
+       sendBtn.addEventListener("click", () => {
+       let msg = document.getElementById('whats-in').value;
+       let relmsg = msg.replace(/ /g,"%20");
+    
+       window.open('https://wa.me/521557153381?text='+relmsg, '_blank'); 
+ 
+   });
+
+   setTimeout(() => {
+   popup.classList.toggle('is-active-whatsapp-popup');
+ }, 3000);
+}
+
+popupWhatsApp();
+    </script>
 
     <section class="about-us-area mt-50 section-padding-100">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="section-heading text-center mx-auto wow fadeInUp" data-wow-delay="300ms">
-                        <h3>Somos FAHEMA</h3>
+                        <h2>Somos FAHEMA</h2>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12 col-md-6 wow fadeInUp" data-wow-delay="400ms">
                     <h3>Misión</h3>
-                    <p>Entregarles a nuestros clientes una amplia gama de productos y equipos que sus trabajadores requieran para poder concretar sus tareas de una manera eficiente y segura mediante Equipos de alta calidad.</p>
+                    <p>Brindarles a nuestros clientes una variedad de productos que requieran para poder realizar sus tareas de una manera eficaz y segura mediante Equipos de alta calidad.</p>
                 </div>
                 <div class="col-12 col-md-6 wow fadeInUp" data-wow-delay="500ms">
                     <h3>Visión</h3>
@@ -116,29 +205,30 @@
         </div>
     </section>
 
-    <div class="social-bar">
+    <!-- <div class="social-bar">
         <a href="https://www.facebook.com/fahemaperu" class="social--icon icon-fb" target="_blank"><i class="fa fa-facebook"></i></a>
         <a href="https://www.instagram.com/fahema.peru" class=" social--icon icon-ig" target="_blank"><i class="fa fa-instagram"></i></a>
         <a href="https://api.whatsapp.com/send?phone=51924413440"   class="social--icon icon-wsp" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
-    </div>
+    </div> -->
 
+    
     <footer class="footer-area">
         <div class="main-footer-area section-padding-100-0">
             <div class="container">
                 <div class="row">
-                   
+                    
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="footer-widget mb-100">
                             <div class="widget-title">
-                                <a href="index.html"><img src="img/core-img/logo-negativo.svg" alt=""></a>
+                                <a href="index.html"><img src="img/core-img/logo-negativo-fahema.svg" alt=""></a>
                             </div>
                             <p>Somos fabricantes, importadores y distribuidores de ferreteria en general.
                                 Nos especializamos en la fabricacion de diferentes tipos de carretillas o buggys.</p>
-                                <div class="footer-social-info">
-                                    <a href="https://www.facebook.com/fahemaperu" target="_blank"><i class="fa fa-facebook"></i></a>
-                                    <a href="https://www.instagram.com/fahema.peru" target="_blank"><i class="fa fa-instagram"></i></a>
-                                    <a href="https://api.whatsapp.com/send?phone=51924413440" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
-                                </div>
+                            <div class="footer-social-info">
+                                <a href="https://www.facebook.com/fahemaperu" target="_blank"><i class="fa fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/fahema.peru" target="_blank"><i class="fa fa-instagram"></i></a>
+                                <a href="https://api.whatsapp.com/send?phone=51924413440" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                            </div>
                         </div>
                     </div>
                     
@@ -157,7 +247,7 @@
                             </nav>
                         </div>
                     </div>
-                    
+                   
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="footer-widget mb-100">
                             <div class="widget-title">
@@ -192,11 +282,17 @@
                             </div>
                             <div class="single-contact d-flex mb-30">
                                 <i class="icon-telephone-1"></i>
-                                <p>922 056 739 <br>977 321 751<br>924 413 440<br>993 213 625</p>
+                                <div class="telephone-contacts">
+                                    <a rel="nofollow" href="https://api.whatsapp.com/send?phone=51924413440" target="_blank">924 413 440</a><br>
+                                    <a rel="nofollow" href="https://api.whatsapp.com/send?phone=51922056739" target="_blank">922 056 739</a><br>
+                                    <a rel="nofollow" href="https://api.whatsapp.com/send?phone=51977321751" target="_blank">977 321 751</a>
+                                    <br>
+                                    <a rel="nofollow" href="https://api.whatsapp.com/send?phone=51993213625" target="_blank">993 213 625</a> </div>
                             </div>
-                            <div class="single-contact d-flex">
+                            <div class="single-contact d-flex mail-contact">
                                 <i class="icon-contract"></i>
-                                <p>fahemaperu@gmail.com</p>
+                                <a href="mailto:fahemaperu@gmail.com?Subject=Le%20escribo%20para%20solicitar%20una%20cotización%20para%20los%20siguientes%20productos%20[%20Insertar%20lista%20aquí%20]%20
+                                Confirme%20la%20disponibilidad%20de%20estos%20productos%20y%20envíenos%20el%20precio%20de%20estos%20productos%20y%20el%20costo%20de%20envío.%20Espero%20su%20respuesta.">fahemaperu@gmail.com</a>
                             </div>
                         </div>
                     </div>
@@ -214,13 +310,11 @@
             </div>
         </div>
     </footer>
-    
 
-    
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
     
     <script src="js/bootstrap/popper.min.js"></script>
-    
+   
     <script src="js/bootstrap/bootstrap.min.js"></script>
     
     <script src="js/plugins/plugins.js"></script>
